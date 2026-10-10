@@ -6,6 +6,7 @@
 
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { TechTalksProvider } from './context/TechTalksContext';
 import { AppRouter } from './routes/AppRouter';
 
@@ -14,6 +15,7 @@ export default function App() {
     <TechTalksProvider>
       <BrowserRouter>
         <AppRouter />
+        <Analytics />
       </BrowserRouter>
     </TechTalksProvider>
   );
